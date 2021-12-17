@@ -1,4 +1,4 @@
-#For dummy data
+##For dummy data:
 yarn add faker
 
 # Getting Started with Create React App
