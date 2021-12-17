@@ -1,9 +1,26 @@
-const Cart = () => {
+import { useContext, useEffect, useState } from "react";
+import { Cart } from "../Context";
+
+import SingleProduct from "./SingleProduct";
+
+const CartPage = () => {
+  const [total, setTotal] = useState();
+  const { cart } = useContext(Cart);
+  useEffect(() => {
+    setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
+  }, [cart]);
   return (
     <div>
-      <h1>Cart</h1>
+      <span style={{ fontSize: 30 }}>My Cart</span>
+      <br />
+      <span>{total}</span>
+      <div className="productContainer">
+        {cart.map((prod) => (
+          <SingleProduct prod={prod} key={prod.id} />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Cart;
+export default CartPage;

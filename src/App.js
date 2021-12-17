@@ -8,12 +8,12 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <main> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
-      {/* </main> */}
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </main>
     </div>
   );
 }
