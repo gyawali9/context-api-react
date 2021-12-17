@@ -4,6 +4,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Extra dependency used in project
 ## For dummy data:
 yarn add faker
 
